@@ -8,27 +8,38 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         #region Motagayerha
 
-        private const string StartRTFTag = @"{\rtf1\ansi\ \rtlch ";
-        private const string FontUsername = @"{\f1\fonttbl{\f1\fcharset0 Tahoma;}{\f2\fcharset0 Microsoft Sans Serif ;}} ";
-        private const string ColorFaw = @"{\colortbl; ";
-        public const string UseBold = @"\b ";
-        public const string useitalic = @"\i ";
-        private const string unuseitalic = @"\i0 ";
-        private const string useUnderLine = @"\ul ";
-        private const string unuseUnderLine = @"\ul0 ";
-        public const string UnUseBold = @"\b0";
-        public const string fontSizeID = @"\fs20 ";
-        public const string FontSizePm_Smal = @"\fs15 ";
-        public const string FontSizePm_Normal = @"\fs25 ";
-        public const string FontSizePm_Larg = @"\fs35 ";
+
+        private const string RTF_StartTag = @"{\rtf1\ansi\ \rtlch ";
+        private const string RTF_FontUsername = @"{\f1\fonttbl{\f1\fcharset0 Tahoma;}{\f2\fcharset0 Microsoft Sans Serif ;}} ";
+        private const string RTF_ColorFaw = @" {\colortbl; ";
+
+        public const string RTFStart_Bold = @" \b ";
+        public const string RTFStart_italic = @" \i ";
+        private const string RTFEnd_italic = @" \i0 ";
+        private const string RTFStart_UnderLine = @" \ul ";
+        private const string RTFEnd_UnderLine = @" \ul0 ";
+        public const string RTFEnd_Bold = @" \b0";
+
+        public const string RTF_fontSizeID = @" \fs20 ";
+        public const string RTF_FontSizePm_Smal = @" \fs15 ";
+        public const string RTF_FontSizePm_Normal = @" \fs25 ";
+        public const string RTF_FontSizePm_Larg = @" \fs35 ";
+
+        public const string ZamBold = @"[b]";
+        public const string ZamItalic = @"[i]";
+        public const string ZamUnLine = @"[ul]";
+        public const string ZamC = @"[c";
+
+        public const string zamFSize1 = @"[s10]";
+        public const string zamFSize3 = @"[s18]";
 
 
-        public const string Usecolor1 = @"\cf1 ";
-        public const string usecolor2 = @"\cf2 ";
-        public const string usefont1 = @"\f0 ";
-        public const string usefont2 = @"\f1 ";
-        private const string newline = @"\par ";
-        private const string Endtext = @"} ";
+        public const string RTFStart_color1 = @" \cf1 ";
+        public const string RTFStart_color2 = @" \cf2 ";
+        public const string RTFStart_font1 = @" \f0 ";
+        public const string RTFStart_font2 = @" \f1 ";
+        private const string RTF_newline = "\\par ";
+        private const string RTF_Endtext = @" } ";
 
         private const string Aval = "[b][cFF7FFF][f\"\"Tahoma\"\"][s08]";
         private const string dovom = "\"[b][cFF7FFF][f\"\"Tahoma\"\"][s08]";
@@ -48,28 +59,24 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         public void NewlineAndAddToListBox(RichTextBox richTextBox3, ListBox.ObjectCollection items)
         {
             FRM_Main fm = new FRM_Main();
-            var c = fm.textBox1.Text;
 
-            //var c = "\",\"";
-            var d = " \\par ";
-            // var d = "\\line";
-            richTextBox3.Text = richTextBox3.Text.Replace(c, d + Environment.NewLine);
-            foreach (var item in richTextBox3.Lines)
+            string c = fm.textBox1.Text;
+
+            richTextBox3.Text = richTextBox3.Text.Replace(c, RTF_newline + Environment.NewLine);
+
+            foreach (string item in richTextBox3.Lines)
             {
                 items.Add(item);
             }
         }
         public string PM(string listBox1)
         {
-            var a = listBox1.Substring(0, listBox1.IndexOf(@")") + 1);
-            var d = listBox1.Replace(a, "");
-            return d;
+            return listBox1.Replace(listBox1.Substring(0, listBox1.IndexOf(@")") + 1), " ");
 
         }
         public string UserName(string listBox1)
         {
-            var a = listBox1.Substring(0, listBox1.IndexOf(@")") + 1);
-            return a;
+            return listBox1.Substring(0, listBox1.IndexOf(@")") + 1);
 
         }
         ConvertColorFont oConvertColorFont = new ConvertColorFont();
@@ -106,39 +113,40 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             TextBox t = new TextBox();
             t = tb3;
-            if (tb3.Text.Contains(@"[c"))
+            if (tb3.Text.Contains(ZamC))
             {
-                tb3.Text = tb3.Text.Remove(tb3.Text.IndexOf(@"[c"), 9);
-                tb3.Text = tb3.Text.Replace(@"[b]", @"\b");
+                tb3.Text = tb3.Text.Remove(tb3.Text.IndexOf(ZamC), 9);
+                tb3.Text = tb3.Text.Replace(ZamBold, RTFStart_Bold);
             }
-            if (tb3.Text.Contains(@"[b]"))
+            if (tb3.Text.Contains(ZamBold))
             {
-                tb3.Text = tb3.Text.Replace(@"[b]", @"\b");
+                tb3.Text = tb3.Text.Replace(ZamBold, RTFStart_Bold);
 
             }
-            if (tb3.Text.Contains(@"[i]"))
+            if (tb3.Text.Contains(ZamItalic))
             {
-                tb3.Text = tb3.Text.Replace(@"[i]", @"\i");
+                tb3.Text = tb3.Text.Replace(ZamItalic, RTFStart_italic);
 
             }
-            if (tb3.Text.Contains(@"[ul]"))
+            if (tb3.Text.Contains(ZamUnLine))
             {
-                tb3.Text = tb3.Text.Replace(@"[ul]", @"\ul");
+                tb3.Text = tb3.Text.Replace(ZamUnLine, RTFStart_UnderLine);
 
             }
             if (tb3.Text.Contains("[f\"\"Microsoft Sans Serif\"\"]"))
             {
-                tb3.Text = tb3.Text.Replace("[f\"\"Microsoft Sans Serif\"\"]", @"\cf2 ");
+                tb3.Text = tb3.Text.Replace("[f\"\"Microsoft Sans Serif\"\"]", RTFStart_color2);
 
             }
-            if (tb3.Text.Contains(@"[s10]"))
+
+            if (tb3.Text.Contains(zamFSize1))
             {
-                tb3.Text = tb3.Text.Replace(@"[s10]", usefont2);
+                tb3.Text = tb3.Text.Replace(zamFSize1, RTFStart_font2);
 
             }
-            if (tb3.Text.Contains(@"[s18]"))
+            if (tb3.Text.Contains(zamFSize3))
             {
-                tb3.Text = tb3.Text.Replace(@"[s18]", usefont2 + FontSizePm_Larg);
+                tb3.Text = tb3.Text.Replace(zamFSize3, RTFStart_font2 + RTF_FontSizePm_Larg);
 
             }
             return tb3.Text;
@@ -148,20 +156,20 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             string d = alls.SelectedItem.ToString();
             var all = string.Concat(
-                StartRTFTag,
-                FontUsername,
-                ColorFaw,
+                RTF_StartTag,
+                RTF_FontUsername,
+                RTF_ColorFaw,
                 FColorstart(alls.SelectedItem.ToString()),
                 @";",
                 FColorEnd(d),
                 @";}",
-                usefont1,
-                fontSizeID,
-                UseBold,
-                Usecolor1,
+                RTFStart_font1,
+                RTF_fontSizeID,
+                RTFStart_Bold,
+                RTFStart_color1,
                 FixID(alls.SelectedItem.ToString()),
-                UnUseBold,
-                usecolor2,
+                RTFEnd_Bold,
+                RTFStart_color2,
                 PmRemoveTag(tb));
             return all;
 
