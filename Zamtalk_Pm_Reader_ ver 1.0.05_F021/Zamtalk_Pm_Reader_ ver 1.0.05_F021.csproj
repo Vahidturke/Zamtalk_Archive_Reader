@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6833DEC-2135-418C-A220-C9482FC694E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Zamtalk_Pm_Reader__ver_1._0._05_F021</RootNamespace>
+    <AssemblyName>Zamtalk_Pm_Reader_ ver 1.0.0.0</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ReSourcesAndImage\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ConvertColorFont.cs" />
+    <Compile Include="Class\CopyDir.cs" />
+    <Compile Include="Class\Finder.cs" />
+    <Compile Include="Interface\ICustomRichTextBox.cs" />
+    <Compile Include="Interface\IConvertColorFont.cs" />
+    <Compile Include="Interface\ICopyDir.cs" />
+    <Compile Include="Interface\IEmoji.cs" />
+    <Compile Include="Interface\IFinder.cs" />
+    <Compile Include="Interface\IPassword.cs" />
+    <Compile Include="Interface\IPmExplorer.cs" />
+    <Compile Include="Interface\IPMFix.cs" />
+    <Compile Include="Interface\ISaveAndLoad.cs" />
+    <Compile Include="Interface\ITempMakers.cs" />
+    <Compile Include="Class\SaveAndLoad.cs" />
+    <Compile Include="Class\Emoji.cs" />
+    <Compile Include="Class\CustomRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\CustomRichTextBox.Designer.cs" />
+    <Compile Include="Forms\FRM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FRM_Main.Designer.cs">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Password.cs" />
+    <Compile Include="Class\PmExplorer.cs" />
+    <Compile Include="Class\PMFix.cs" />
+    <Compile Include="Class\Program.cs" />
+    <Compile Include="Forms\FRM_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FRM_Settings.Designer.cs">
+      <DependentUpon>FRM_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FRM_ZamtalkPasswordFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FRM_ZamtalkPasswordFinder.Designer.cs">
+      <DependentUpon>FRM_ZamtalkPasswordFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\TempMakers.cs" />
+    <EmbeddedResource Include="ReSourcesAndImage\Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class\CustomRichTextBox.resx">
+      <DependentUpon>CustomRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Main.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Settings.resx">
+      <DependentUpon>FRM_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_ZamtalkPasswordFinder.resx">
+      <DependentUpon>FRM_ZamtalkPasswordFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_01__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_02__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_03__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_04__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_05__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_06__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_07__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_08__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_09__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_10__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_11__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_12__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_13__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_14__9_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %281%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %282%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %283%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %284%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %285%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %286%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %287%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %288%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15 %289%29.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__1_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__2_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__3_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__4_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__5_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__6_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__7_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__8_.gif" />
+    <Content Include="ReSourcesAndImage\IconEmoji\R_15__9_.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

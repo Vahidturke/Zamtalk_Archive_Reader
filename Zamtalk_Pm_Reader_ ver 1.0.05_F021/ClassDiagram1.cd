@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.ConvertColorFont" Collapsed="true">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAgAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\ConvertColorFont.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.CopyDir" Collapsed="true">
+    <Position X="9" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAQAAAAIAgAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Class\CopyDir.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.CustomRichTextBox" Collapsed="true">
+    <Position X="10.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACCAAACAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\CustomRichTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.Emoji" Collapsed="true">
+    <Position X="12.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAABAAAAAAAAAAAIAAAAAQAAAAABA=</HashCode>
+      <FileName>Class\Emoji.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.Finder" Collapsed="true">
+    <Position X="14.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAGAkQgAAOAAIAAAAIAAgAAQAIAACAUYIMAECQYo=</HashCode>
+      <FileName>Class\Finder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.Password" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAABCgBAAAAAAAEABAkAgAAAAAgAAAAAAEAIAAAA=</HashCode>
+      <FileName>Class\Password.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.PmExplorer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAgAAAAAAAAAAAEAAQAAAAgABAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Class\PmExplorer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.174" Collapsed="true" />
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.PMFix" Collapsed="true">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAIgAAAAABAAiIAAAAAAAlAAAAAAAAAAAAQBI=</HashCode>
+      <FileName>Class\PMFix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.Program" Collapsed="true">
+    <Position X="9" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Class\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.SaveAndLoad" Collapsed="true">
+    <Position X="14.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQAAAAAAQAAAAAAAAAEAA=</HashCode>
+      <FileName>Class\SaveAndLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.TempMakers" Collapsed="true">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAQAAAAAAAAAAAAAAIAAACAAAAAAAEAAAAAAAAAQA=</HashCode>
+      <FileName>Class\TempMakers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.FRM_Main" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>p8RFgv0wHrE4APVJQIKbWHM784LjhdpY1uITdzUEFZs=</HashCode>
+      <FileName>Forms\FRM_Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.FRM_Settings" Collapsed="true">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAgFABmAAACACAACYAAACEAAABAICAGQAEAAEAAA=</HashCode>
+      <FileName>Forms\FRM_Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.FRM_ZamtalkPasswordFinder" Collapsed="true">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQBAAAAAKEAABAAAACAAAEiBAAQAAAAAGACAYEAgBA=</HashCode>
+      <FileName>Forms\FRM_ZamtalkPasswordFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Full_ver_1._0._03.Properties.Resources" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAD8/wMAfMMAAPgPAAD9/wMA7TMAAPQPAAC8wwAA3LM=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.Properties.Settings" Collapsed="true">
+    <Position X="14.25" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zamtalk_Pm_Reader__vr_1._0._0._0.ReSourcesAndImage.Resource1" Collapsed="true">
+    <Position X="10.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAD8/wMAfMMAAPgPgAD9/wMA7TMABPQPAAC8wwAA3LM=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.IConvertColorFont" Collapsed="true">
+    <Position X="7.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAgAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IConvertColorFont.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.ICopyDir" Collapsed="true">
+    <Position X="9" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAQAAAAIAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ICopyDir.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.ICustomRichTextBox" Collapsed="true">
+    <Position X="10.75" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ICustomRichTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.IEmoji" Collapsed="true">
+    <Position X="12.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABA=</HashCode>
+      <FileName>Interface\IEmoji.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.IFinder" Collapsed="true">
+    <Position X="14.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAIAAAAIAAgAAAAAAAAAUIAEAAAAQg=</HashCode>
+      <FileName>Interface\IFinder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.IPassword" Collapsed="true">
+    <Position X="7.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCgAAAAAAAAEABAgAgAAAAAgAAAAAAEAIAAAA=</HashCode>
+      <FileName>Interface\IPassword.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.IPmExplorer" Collapsed="true">
+    <Position X="9" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAgAAAAAAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Interface\IPmExplorer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.IPMFix" Collapsed="true">
+    <Position X="10.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAgAAAAAAAACAAAAAAAAkAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Interface\IPMFix.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.ISaveAndLoad" Collapsed="true">
+    <Position X="12.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQAAAAAAQAAAAAAAAAEAA=</HashCode>
+      <FileName>Interface\ISaveAndLoad.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zamtalk_Pm_Reader__vr_1._0._0._0.ITempMakers" Collapsed="true">
+    <Position X="14.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAIAAACAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ITempMakers.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
