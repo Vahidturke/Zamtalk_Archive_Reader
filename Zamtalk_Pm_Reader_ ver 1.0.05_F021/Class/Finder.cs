@@ -13,17 +13,17 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private const string RTF_FontUsername = @"{\f1\fonttbl{\f1\fcharset0 Tahoma;}{\f2\fcharset0 Microsoft Sans Serif ;}} ";
         private const string RTF_ColorFaw = @" {\colortbl; ";
 
-        public const string RTFStart_Bold = @" \b ";
-        public const string RTFStart_italic = @" \i ";
-        private const string RTFEnd_italic = @" \i0 ";
-        private const string RTFStart_UnderLine = @" \ul ";
+        public const string RTFStart_Bold = @"\b ";
+        public const string RTFStart_italic = @"\i ";
+        private const string RTFEnd_italic = @"\i0 ";
+        private const string RTFStart_UnderLine = @"\ul ";
         private const string RTFEnd_UnderLine = @" \ul0 ";
         public const string RTFEnd_Bold = @" \b0";
 
-        public const string RTF_fontSizeID = @" \fs20 ";
-        public const string RTF_FontSizePm_Smal = @" \fs15 ";
-        public const string RTF_FontSizePm_Normal = @" \fs25 ";
-        public const string RTF_FontSizePm_Larg = @" \fs35 ";
+        public const string RTF_fontSizeID = @"\fs20 ";
+        public const string RTF_FontSizePm_Smal = @"\fs15 ";
+        public const string RTF_FontSizePm_Normal = @"\fs25 ";
+        public const string RTF_FontSizePm_Larg = @"\fs35 ";
 
         public const string ZamBold = @"[b]";
         public const string ZamItalic = @"[i]";
@@ -34,10 +34,10 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         public const string zamFSize3 = @"[s18]";
 
 
-        public const string RTFStart_color1 = @" \cf1 ";
-        public const string RTFStart_color2 = @" \cf2 ";
-        public const string RTFStart_font1 = @" \f0 ";
-        public const string RTFStart_font2 = @" \f1 ";
+        public const string RTFStart_color1 = @"\cf1 ";
+        public const string RTFStart_color2 = @"\cf2 ";
+        public const string RTFStart_font1 = @"\f0 ";
+        public const string RTFStart_font2 = @"\f1 ";
         private const string RTF_newline = "\\par ";
         private const string RTF_Endtext = @" } ";
 

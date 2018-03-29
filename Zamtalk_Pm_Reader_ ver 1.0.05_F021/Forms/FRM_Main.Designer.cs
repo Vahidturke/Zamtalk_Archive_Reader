@@ -92,6 +92,7 @@
             this.addToSearchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBoxShowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.showEmojiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.findPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,13 +100,14 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.showEmojiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.B)).BeginInit();
             this.B.Panel1.SuspendLayout();
             this.B.Panel2.SuspendLayout();
             this.B.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip_TreeView.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_PM_RTF)).BeginInit();
             this.splitContainer_PM_RTF.Panel1.SuspendLayout();
             this.splitContainer_PM_RTF.Panel2.SuspendLayout();
             this.splitContainer_PM_RTF.SuspendLayout();
@@ -524,7 +526,7 @@
             // panelColor
             // 
             this.panelColor.AutoSize = true;
-            this.panelColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelColor.BackColor = System.Drawing.Color.Red;
             this.panelColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelColor.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelColor.Location = new System.Drawing.Point(101, 54);
@@ -700,9 +702,16 @@
             // searchBoxShowToolStripMenuItem1
             // 
             this.searchBoxShowToolStripMenuItem1.Name = "searchBoxShowToolStripMenuItem1";
-            this.searchBoxShowToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.searchBoxShowToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
             this.searchBoxShowToolStripMenuItem1.Text = "SearchBox Show";
             this.searchBoxShowToolStripMenuItem1.Click += new System.EventHandler(this.SearchBoxShowToolStripMenuItem1_Click);
+            // 
+            // showEmojiToolStripMenuItem
+            // 
+            this.showEmojiToolStripMenuItem.Name = "showEmojiToolStripMenuItem";
+            this.showEmojiToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.showEmojiToolStripMenuItem.Text = "Show Emoji";
+            this.showEmojiToolStripMenuItem.Click += new System.EventHandler(this.ShowEmojiToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -760,13 +769,6 @@
             this.panel3.Size = new System.Drawing.Size(694, 26);
             this.panel3.TabIndex = 3;
             // 
-            // showEmojiToolStripMenuItem
-            // 
-            this.showEmojiToolStripMenuItem.Name = "showEmojiToolStripMenuItem";
-            this.showEmojiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.showEmojiToolStripMenuItem.Text = "Show Emoji";
-            this.showEmojiToolStripMenuItem.Click += new System.EventHandler(this.ShowEmojiToolStripMenuItem_Click);
-            // 
             // FRM_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -784,12 +786,14 @@
             this.Load += new System.EventHandler(this.FRM_Main_Load);
             this.B.Panel1.ResumeLayout(false);
             this.B.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.B)).EndInit();
             this.B.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.contextMenuStrip_TreeView.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.splitContainer_PM_RTF.Panel1.ResumeLayout(false);
             this.splitContainer_PM_RTF.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_PM_RTF)).EndInit();
             this.splitContainer_PM_RTF.ResumeLayout(false);
             this.contextMenuStrip_RichTextBox.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -36,20 +36,20 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         #region متغیر
 
-        private RichTextBox RT_Aval = new RichTextBox();
-        private List<RichTextBox> ListMytext_Text = new List<RichTextBox>();
         private List<string> ls = new List<string>();
+        private List<RichTextBox> ListMytext_Text = new List<RichTextBox>();
         private TextBox AllText = new TextBox();
         private TextBox IDText = new TextBox();
         private TextBox PmText = new TextBox();
         private TextBox ColorID = new TextBox();
         private TextBox PmColor = new TextBox();
+        private RichTextBox RT_Aval = new RichTextBox();
         private RichTextBox richTextBoxHide = new RichTextBox();
         private RichTextBox Mytext;
         private RichTextBox richTextBox3 = new RichTextBox();
         private bool SearchBoxShow = false;
-        private Size StartSize = new Size(750, 420);
         private bool ShowEm = false;
+        private Size StartSize = new Size(750, 420);
 
         #endregion
 
@@ -547,7 +547,8 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             //Oemoji.CreateEmotions();
             //Oemoji.AddEmotions();
 
-            //richTextBox4.Text = customRichTextBox1.Rtf;
+            richTextBox4.Text = customRichTextBox1.Rtf;
+
             ShowEmojiScript(ShowEm);
 
 
