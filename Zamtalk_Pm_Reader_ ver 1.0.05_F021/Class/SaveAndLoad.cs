@@ -30,7 +30,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             TempMakers oTempMakers = new TempMakers();
 
-            string path = oTempMakers.AppDataFile("copyarchive.txt");
+            string path = TempMakers.AppDataFile("copyarchive.txt");
 
             try
             {
@@ -52,11 +52,12 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
             MessageBox.Show("Save Successfully");
         }
+       
         public void LoadData(ListBox listBox, string pathtxtfile)
         {
             TempMakers oTempMakers = new TempMakers();
 
-            string path = oTempMakers.AppDataFile("copyarchive.txt");
+            string path = TempMakers.AppDataFile("copyarchive.txt");
 
             try
             {
@@ -81,11 +82,39 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
             MessageBox.Show("Load Successfully");
         }
+        public void LoadData_UnderMsg(ListBox listBox, string pathtxtfile)
+        {
+            TempMakers oTempMakers = new TempMakers();
+
+            string path = TempMakers.AppDataFile("copyarchive.txt");
+
+            try
+            {
+                StreamReader LoadFile = new StreamReader(path);
+
+                string[] allLines = File.ReadAllLines(path);
+
+                listBox.Items.Clear();
+
+                listBox.Items.AddRange(allLines);
+
+                RemoveDublicValueListbox(listBox);
+
+                LoadFile.Close();
+            }
+
+            catch (Exception ex)
+            {
+
+                ex.ToString();
+            }
+
+        }
         public void LoadData_BedoneMsg(ListBox listBox, string pathtxtfile)
         {
             TempMakers oTempMakers = new TempMakers();
 
-            string path = oTempMakers.AppDataFile("copyarchive.txt");
+            string path = TempMakers.AppDataFile("copyarchive.txt");
 
             try
             {

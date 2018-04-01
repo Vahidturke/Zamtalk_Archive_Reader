@@ -6,8 +6,13 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
+using System.Globalization;
 using Zamtalk_Pm_Reader__ver_1._0._05_F021;
+using System.Collections;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 {
@@ -15,41 +20,59 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
     {
         public FRM_Main()
         {
-            InitializeComponent();
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            this.InitializeComponent();
+            enToolStripMenuItem.Enabled = false;
+
         }
+        public static string filename = "copyarchive.txt";
+        public static string foldername = "copyarchive";
 
         #region متغیر ها
 
         #region آبجکت
 
         private TempMakers oTempMakers = new TempMakers();
-        private FRM_Settings fm = new FRM_Settings();
-        private FRM_ZamtalkPasswordFinder fmpw = new FRM_ZamtalkPasswordFinder();
+        private FRM_Settings oFRM_Settings = new FRM_Settings();
+        private FRM_ZamtalkPasswordFinder oFRM_ZamtalkPasswordFinder = new FRM_ZamtalkPasswordFinder();
         private PmExplorer oPmExplorer = new PmExplorer();
         private Password oPassword = new Password();
-        private FRM_ZamtalkPasswordFinder pw = new FRM_ZamtalkPasswordFinder();
-        private Emoji Oemoji = new Emoji();
+        private Emoji oEmoji = new Emoji();
         private AboutBox1 oAboutBox1 = new AboutBox1();
         private Finder oFinder = new Finder();
+        private SaveAndLoad oSaveAndLoad = new SaveAndLoad();
 
         #endregion
 
         #region متغیر
 
-        private List<string> ls = new List<string>();
-        private List<RichTextBox> ListMytext_Text = new List<RichTextBox>();
         private TextBox AllText = new TextBox();
         private TextBox IDText = new TextBox();
         private TextBox PmText = new TextBox();
         private TextBox ColorID = new TextBox();
         private TextBox PmColor = new TextBox();
         private RichTextBox RT_Aval = new RichTextBox();
-        private RichTextBox richTextBoxHide = new RichTextBox();
-        private RichTextBox Mytext;
         private RichTextBox richTextBox3 = new RichTextBox();
-        private bool SearchBoxShow = false;
-        private bool ShowEm = false;
+        private bool ShowSearchBox = false;
+
+        private bool ShowEmoji = false;
+
         private Size StartSize = new Size(750, 420);
+
+        public static string Farsi
+        {
+            get
+            {
+                return Farsi;
+            }
+            internal set
+            {
+                Farsi = value;
+            }
+        }
+
+
 
         #endregion
 
@@ -58,17 +81,46 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         #region متدها
 
+        public void Loaderstartwindows()
+        {
+
+            this.groupBox3.Size = new Size(groupBox3.Width, 50);
+
+            groupBox_search.Visible = ShowSearchBox;
+
+            this.Size = StartSize;
+
+            splitContainer_PM_RTF.Panel2Collapsed = true;
+
+            TempMakers.AppdataFolder(FRM_Settings.foldername);
+            this.WindowState = FormWindowState.Normal;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            oSaveAndLoad.LoadData_UnderMsg(listBox1, TempMakers.AppDataFile(filename));
+
+            listBox1.Visible = false;
+            // TSMI_HideEmoji.Visible = false;
+        }
+
 
         /// <summary>
         /// متد دکمه لود کردن آرشیو
         /// </summary>
         public void ReloadArchive()
         {
-            StaticCopy(fm.listBox1, treeView1, oTempMakers.AppdataFolder(FRM_Settings.foldername));
+            TreeviewClearAllItems();
+
+            SaveAndLoad oSaveAndLoad = new SaveAndLoad();
+
+            oSaveAndLoad.LoadData_UnderMsg(listBox1, TempMakers.AppDataFile(filename));
+
+            if (treeView1.Nodes.Count < 1)
+            {
+                CopyDir.StaticCopy(listBox1, treeView1, "");
+            }
         }
         public void StaticCopy(ListBox listBox, TreeView treeView, string magasd)
         {
-            magasd = oTempMakers.AppdataFolder(FRM_Settings.foldername);
+            magasd = TempMakers.AppdataFolder(FRM_Settings.foldername);
 
             foreach (var item in listBox.Items)
             {
@@ -155,19 +207,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
               + Environment.NewLine);
             rich2.Rtf = s.ToString();
         }
-        public void AddControl()
-        {
-            Mytext = new RichTextBox();
-            Controls.Add(Mytext);
-            ListMytext_Text.Add(Mytext);
-            Mytext.BorderStyle = BorderStyle.None;
-            Mytext.Size = new Size(this.Width, 30);
 
-            richTextBoxHide.SelectAll();
-            richTextBoxHide.Copy();
-            Mytext.Paste();
-            customRichTextBox1.Paste();
-        }
         private void SearchPanelShow()
         {
             //گرفتن ارتفا پانل نمایش سرچ
@@ -175,28 +215,20 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             //گرفتن عرض پانل نمایش سرچ
             int _Width = groupBox3.Width;
 
-            if (!SearchBoxShow)
+            if (ShowSearchBox)
             {
-                SearchBoxShow = true;
+                ShowSearchBox = false;
 
-                searchBoxShowToolStripMenuItem.Text = "SearchBox Hide";
-                searchBoxShowToolStripMenuItem1.Text = "SearchBox Hide";
-                groupBox3.Size = new Size(_Width, 120);
+                TSMI_HideSearchBox.Visible = false;
 
-            }
-            else if (SearchBoxShow)
-            {
-
-                SearchBoxShow = false;
-
-                searchBoxShowToolStripMenuItem.Text = "SearchBox Show";
-                searchBoxShowToolStripMenuItem1.Text = "SearchBox Show";
-
+                TSMI_ShowSearchBox.Visible = true;
 
                 groupBox3.Size = new Size(_Width, 50);
+
+
             }
 
-            groupBox_search.Visible = SearchBoxShow;
+            groupBox_search.Visible = ShowSearchBox;
 
         }
 
@@ -267,9 +299,9 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             if (s)
             {
-                Oemoji = new Emoji(customRichTextBox1);
-                Oemoji.CreateEmotions();
-                Oemoji.AddEmotions();
+                oEmoji = new Emoji(customRichTextBox1);
+                oEmoji.CreateEmotions();
+                oEmoji.AddEmotions();
                 richTextBox4.Text = customRichTextBox1.Rtf;
 
             }
@@ -286,11 +318,8 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         public void FontChange()
         {
-            Oemoji.FontChange(customRichTextBox1);
+            oEmoji.FontChange(customRichTextBox1);
         }
-
-
-
 
 
         #endregion
@@ -305,17 +334,11 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         private void FRM_Main_Load(object sender, EventArgs e)
         {
-            groupBox3.Size = new Size(groupBox3.Width, 50);
-            groupBox_search.Visible = SearchBoxShow;
-            this.Size = StartSize;
+            Loaderstartwindows();
 
-            splitContainer_PM_RTF.Panel2Collapsed = true;
-
-            oTempMakers.AppdataFolder(FRM_Settings.foldername);
-
-
-            // BTN_Reload.Text = Settings.Default["Title"].ToString();
         }
+
+
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             try
@@ -328,6 +351,19 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             }
             catch (Exception) { }
 
+        }
+        public List<string> ArchivePaths = new List<string>();
+
+
+        public void ListboxtoList()
+        {
+            FRM_Settings o = new FRM_Settings();
+
+            foreach (var item in o.listBox1.Items)
+            {
+                ArchivePaths.Add(item.ToString());
+
+            }
         }
         private void BTN_Reload_Click(object sender, EventArgs e)
         {
@@ -443,19 +479,11 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private void SearchBoxShowToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             SearchPanelShow();
+            //  searchBoxHideToolStripMenuItem.Visible = false;
         }
         private void ShowEmojiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ShowEm)
-            {
-                ShowEm = false;
-                showEmojiToolStripMenuItem.Text = "Show Emoji";
-            }
-            else if (!ShowEm)
-            {
-                ShowEm = true;
-                showEmojiToolStripMenuItem.Text = "Hide Emoji";
-            }
+
         }
 
         #endregion
@@ -464,12 +492,14 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         private void SettingsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            fm.ShowDialog();
+            FRM_Settings f = new FRM_Settings();
+            f.Show();
         }
 
         private void FindPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pw.ShowDialog();
+            FRM_ZamtalkPasswordFinder f = new FRM_ZamtalkPasswordFinder();
+            f.Show();
 
         }
 
@@ -484,7 +514,9 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            oAboutBox1.Show();
+            AboutBox1 f = new AboutBox1();
+
+            f.Show();
         }
 
         #endregion
@@ -543,16 +575,25 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private void CustomRichTextBox1_TextChanged(object sender, EventArgs e)
         {
 
-            //Oemoji = new Emoji(customRichTextBox1);
-            //Oemoji.CreateEmotions();
-            //Oemoji.AddEmotions();
+            customRichTextBox1.Rtf = customRichTextBox1.Rtf;
+
+            //customRichTextBox1.Rtf =customRichTextBox1.Rtf.Replace(@" ]", newValue: Environment.NewLine).Replace(@"[","");
 
             richTextBox4.Text = customRichTextBox1.Rtf;
 
-            ShowEmojiScript(ShowEm);
+            ShowEmojiScript(ShowEmoji);
+            // Fixer("^   ([\\]])", "A", customRichTextBox1.Rtf);
 
 
         }
+        private string Fixer(string Pattern, string Replacement, string Input)
+        {
+            RegexOptions options = RegexOptions.IgnoreCase;
+            Regex regex = new Regex(Pattern, options, TimeSpan.FromMilliseconds(1000));
+
+            return regex.Replace(Input, Replacement);
+        }
+
 
         #endregion
 
@@ -614,12 +655,193 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             _Open();
         }
-
-
         #endregion
 
         #endregion
+
+        private void EnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLang(this);
+        }
+
+        private void FrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLang(this);
+        }
+
+        public void ChangeLang(Form c)
+        {
+            switch (Thread.CurrentThread.CurrentUICulture.IetfLanguageTag)
+            {
+                case "fa-IR":
+
+                    c.Controls.Clear();
+
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                    this.InitializeComponent();
+
+                    enToolStripMenuItem.Enabled = false;
+
+                    frToolStripMenuItem.Enabled = true;
+
+                    this.Loaderstartwindows();
+                    break;
+                case "en-US":
+
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("fa-IR");
+
+                    this.Controls.Clear();
+
+                    this.InitializeComponent();
+
+                    this.frToolStripMenuItem.Enabled = false;
+
+                    this.enToolStripMenuItem.Enabled = true;
+
+                    this.Loaderstartwindows();
+
+                    break;
+                default:
+                    break;
+
+            }
+
+        }
+
+
+        private void SearchBoxHideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchBoxHidSHow();
+        }
+        public void TreeviewClearAllItems()
+        {
+            treeView1.Nodes.Clear();
+        }
+        public void SearchBoxHidSHow()
+        {
+            //گرفتن ارتفا پانل نمایش سرچ
+
+            int _Height = groupBox3.Height;
+            //گرفتن عرض پانل نمایش سرچ
+            int _Width = groupBox3.Width;
+
+            if (!ShowSearchBox)
+            {
+                ShowSearchBox = true;
+
+                TSMI_ShowSearchBox.Visible = false;
+                TSMI_HideSearchBox.Visible = true;
+                groupBox3.Size = new Size(_Width, 120);
+            }
+            groupBox_search.Visible = ShowSearchBox;
+
+        }
+        private void ViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void hideEmojiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ShowEmoji = false;
+            hideEmojiToolStripMenuItem1.Visible = false;
+            showEmojiToolStripMenuItem.Visible = true;
+
+        }
+
+
+        private void showEmojiToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ShowEmoji = true;
+
+            showEmojiToolStripMenuItem.Visible = false;
+            hideEmojiToolStripMenuItem1.Visible = true;
+        }
+
+
+
+        public bool TrueFalse(bool ss)
+        {
+            if (ss)
+            {
+                ShowEmojiScript(ss);
+
+                return ss = false;
+
+            }
+            else if (!ss)
+
+            {
+                ShowEmojiScript(!ss);
+                ss = true;
+                showEmojiToolStripMenuItem.Visible = false;
+                hideEmojiToolStripMenuItem1.Visible = true;
+            }
+            return ss;
+        }
+
+        public void NodRefesh()
+        {
+            TreeNode a = treeView1.SelectedNode;
+            treeView1.SelectedNode = treeView1.SelectedNode.NextNode;
+            treeView1.SelectedNode = a;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
 
 
     }
+
+}
+
+class MyClass
+{
+
+    ListBox ls = new ListBox();
+    private TreeView treeView1;
+
+    public void AddNodeAndChildNodesToList(TreeNode node)
+    {
+
+        ls.Items.Add(node.Text);    // Adding current nodename to ListBox     
+
+        foreach (TreeNode actualNode in node.Nodes)
+        {
+            AddNodeAndChildNodesToList(actualNode); // recursive call
+        }
+    }
+    private void EnumerateAllNodes()
+    {
+        TreeView myTree = treeView1;
+
+        var allNodes = myTree.Nodes
+            .Cast<TreeNode>()
+            .SelectMany(GetNodeBranch);
+
+        foreach (var treeNode in allNodes)
+        {
+            treeView1.SelectedNode = treeNode;
+            Thread.Sleep(3000);
+        }
+    }
+
+    private IEnumerable<TreeNode> GetNodeBranch(TreeNode node)
+    {
+        yield return node;
+
+        foreach (TreeNode child in node.Nodes)
+            foreach (var childChild in GetNodeBranch(child))
+                yield return childChild;
+    }
+
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Zamtalk_Pm_Reader__vr_1._0._0._0
@@ -14,8 +13,8 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRM_Main());
-
+          Application.Run(new FRM_Main());
+        
         }
     }
 }

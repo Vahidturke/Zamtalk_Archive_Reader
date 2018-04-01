@@ -6,26 +6,11 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
     /// <summary>
     /// کلاس نمایش فایل های مسیرهای اضافه شده برای باز کردن آرشیو
     /// </summary>
-    public class PmExplorer : IPmExplorer
+    internal class PmExplorer
     {
-
-        /// <summary>
-        /// اضافه کردن ایتم های انتخاب شده به  لیست باکس .داری یک ورودی .و برای خواندن مسیر های آرشیو به کار خواهد رفت
-        /// </summary>
-        /// <param name="mylb">ورودی لیست باکس</param>
-        public void AddItem(ListBox mylb)
+        public PmExplorer()
         {
-            FolderBrowserDialog _FolderBrowserDialog = new FolderBrowserDialog();
-
-            _FolderBrowserDialog.ShowDialog();
-
-            mylb.Items.Add(_FolderBrowserDialog.SelectedPath);
         }
-
-        /// <summary>
-        /// حذف ایتم یا مورد انتخاب شده از لیست باکس 
-        /// </summary>
-        /// <param name="listbox">لیست باکسی که عمل روی آن اجرا خواهد شد</param>
         public void DeletedSelectedItems(ListBox listbox)
         {
             object selecteditem = listbox.SelectedItem;
@@ -40,37 +25,38 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             }
         }
 
-        /// <summary>
-        /// پاک کردن تمام موارد داخل لیست باکس
-        /// </summary>
-        /// <param name="listbox"></param>
-        public void ListboxClearAll(ListBox listbox) => listbox.Items.Clear();
+        public void AddItem(ListBox listbox)
+        {
+            var f = new FolderBrowserDialog(); f.ShowDialog();
+
+            listbox.Items.Add(f.SelectedPath);
+
+        }
+
+        public void ListboxClearAll(ListBox listbox)
+        {
+            listbox.Items.Clear();
+        }
+
+
+        public void ListBoxMoveToTreeView(TreeView treeView, ListBox listBox)
+        {
+
+            foreach (var item in listBox.Items)
+            {
+                TreeViewexplorer(treeView, item.ToString());
+            }
+
+        }
 
         /// <summary>
         /// متدی دارای 2 ورودی برای نمایش آرشیو در تری ویو
         /// </summary>
         /// <param name="treeView1">تری ویو </param>
         /// <param name="path">مسیر پوشه هایی در تری ویو نمایش داده خواهند شد</param>
-
-        public void TreeViewexplorer(TreeView treeView1, string path) // populate treeview
-    => ListDirectory(treeView1, path);
-
-        /// <summary>
-        /// آیتم هایی که به لیست باکس وارده شده را در تری ویو اضافه کن و نمایش بده
-        /// </summary>
-        /// <param name="treeView">یک کنترل تری ویو </param>
-        /// <param name="listBox">یک کنترلر لیست باکس</param>
-        public void ListBoxMoveToTreeView(TreeView treeView, ListBox listBox)
+        internal void TreeViewexplorer(TreeView treeView1, string path) // populate treeview
         {
-            foreach (var item in listBox.Items)
-            {
-                TreeViewexplorer(treeView, item.ToString());
-            }
-
-            foreach (var item in listBox.Items)
-            {
-                TreeViewexplorer(treeView, item.ToString());
-            }
+            ListDirectory(treeView1, path);
         }
 
         #region Encapsol
@@ -102,3 +88,5 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
     }
 }
+
+

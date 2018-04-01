@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -23,6 +38,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -102,17 +118,47 @@
       <DependentUpon>FRM_ZamtalkPasswordFinder.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\TempMakers.cs" />
+    <EmbeddedResource Include="Forms\AboutBox1.aa.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutBox1.fa-IR.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class\CustomRichTextBox.resx">
       <DependentUpon>CustomRichTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Main.aa.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Main.da.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Main.en-US.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Main.fa-IR.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Main.fa.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Main.pl.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FRM_Main.resx">
       <DependentUpon>FRM_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_Settings.fa-IR.resx">
+      <DependentUpon>FRM_Settings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FRM_Settings.resx">
       <DependentUpon>FRM_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRM_ZamtalkPasswordFinder.fa-IR.resx">
+      <DependentUpon>FRM_ZamtalkPasswordFinder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FRM_ZamtalkPasswordFinder.resx">
       <DependentUpon>FRM_ZamtalkPasswordFinder.cs</DependentUpon>
@@ -404,6 +450,13 @@
     <Content Include="ReSourcesAndImage\R_15__7_.gif" />
     <Content Include="ReSourcesAndImage\R_15__8_.gif" />
     <Content Include="ReSourcesAndImage\R_15__9_.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
