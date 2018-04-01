@@ -740,7 +740,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
 
         }
-        private void hideEmojiToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void HideEmojiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ShowEmoji = false;
             hideEmojiToolStripMenuItem1.Visible = false;
@@ -749,7 +749,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         }
 
 
-        private void showEmojiToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void ShowEmojiToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             ShowEmoji = true;
 
@@ -786,13 +786,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             treeView1.SelectedNode = a;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
+    
 
 
 

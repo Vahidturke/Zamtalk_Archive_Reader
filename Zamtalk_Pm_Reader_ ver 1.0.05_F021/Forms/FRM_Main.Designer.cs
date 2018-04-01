@@ -612,13 +612,13 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             // 
             this.showEmojiToolStripMenuItem.Name = "showEmojiToolStripMenuItem";
             resources.ApplyResources(this.showEmojiToolStripMenuItem, "showEmojiToolStripMenuItem");
-            this.showEmojiToolStripMenuItem.Click += new System.EventHandler(this.showEmojiToolStripMenuItem_Click_1);
+            this.showEmojiToolStripMenuItem.Click += new System.EventHandler(this.ShowEmojiToolStripMenuItem_Click_1);
             // 
             // hideEmojiToolStripMenuItem1
             // 
             this.hideEmojiToolStripMenuItem1.Name = "hideEmojiToolStripMenuItem1";
             resources.ApplyResources(this.hideEmojiToolStripMenuItem1, "hideEmojiToolStripMenuItem1");
-            this.hideEmojiToolStripMenuItem1.Click += new System.EventHandler(this.hideEmojiToolStripMenuItem1_Click);
+            this.hideEmojiToolStripMenuItem1.Click += new System.EventHandler(this.HideEmojiToolStripMenuItem1_Click);
             // 
             // toolsToolStripMenuItem
             // 

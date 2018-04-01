@@ -45,10 +45,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
                 CopyAll(diSource, diTarget);
 
             }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.ToString());
-            }
+            catch { }
         }
         internal static void CopyAll(DirectoryInfo source, DirectoryInfo target)
         {
