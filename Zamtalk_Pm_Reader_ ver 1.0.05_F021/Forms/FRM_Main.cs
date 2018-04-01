@@ -26,8 +26,11 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             enToolStripMenuItem.Enabled = false;
 
         }
+
         public static string filename = "copyarchive.txt";
         public static string foldername = "copyarchive";
+
+        public List<string> ArchivePaths = new List<string>();
 
         #region متغیر ها
 
@@ -93,8 +96,11 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             splitContainer_PM_RTF.Panel2Collapsed = true;
 
             TempMakers.AppdataFolder(FRM_Settings.foldername);
+
             this.WindowState = FormWindowState.Normal;
+
             this.StartPosition = FormStartPosition.CenterScreen;
+
             oSaveAndLoad.LoadData_UnderMsg(listBox1, TempMakers.AppDataFile(filename));
 
             listBox1.Visible = false;
@@ -118,23 +124,10 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
                 CopyDir.StaticCopy(listBox1, treeView1, "");
             }
         }
-        public void StaticCopy(ListBox listBox, TreeView treeView, string magasd)
-        {
-            magasd = TempMakers.AppdataFolder(FRM_Settings.foldername);
-
-            foreach (var item in listBox.Items)
-            {
-
-                CopyDir.Copy((string)item, magasd, true);
-            }
-
-            oPmExplorer.TreeViewexplorer(treeView, magasd);
-        }
         public string SelectedTreeviewfullpath(TreeView treeView)
         {
 
             treeView = treeView1;
-
 
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + treeView.SelectedNode.FullPath;
 
@@ -142,7 +135,9 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         public void ConfigForShowPm_in_richtextbox(ListBox lb, ListBox lsbox2, RichTextBox rt1)
         {
             customRichTextBox1.Clear();
+
             ListBoxKhatKhatShode.Items.Clear();
+
             ListBoxRTFshode.Items.Clear();
 
             lb = new ListBox();
@@ -151,13 +146,17 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             {
                 lb.Items.Add(customRichTextBox1.Lines[i]);
             }
+
             try
             {
                 rt1.LoadFile(SelectedTreeviewfullpath(treeView1), RichTextBoxStreamType.UnicodePlainText);
+
                 Btn1(rt1, ListBoxKhatKhatShode);
+
                 for (int i = 0; i < lsbox2.Items.Count; i++)
                 {
                     ListBoxRTFshode.SelectedItem = lsbox2.Items[i];
+
                 }
             }
             catch (Exception) { }
@@ -165,14 +164,19 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         public void Btn1(RichTextBox txt, ListBox lsbox1)
         {
             txt.LoadFile(SelectedTreeviewfullpath(treeView1), RichTextBoxStreamType.UnicodePlainText);
+
             oFinder.NewlineAndAddToListBox(txt, lsbox1.Items);
+
             for (int i = 0; i < ListBoxKhatKhatShode.Items.Count; i++)
             {
                 ListBoxKhatKhatShode.SelectedIndex = i;
 
                 toolStripProgressBar1.Maximum = ListBoxKhatKhatShode.Items.Count - 1;
+
                 toolStripProgressBar1.Visible = Enabled;
+
                 toolStripProgressBar1.Size = new Size(this.Width / 3, 12);
+
                 toolStripProgressBar1.Value = i;
 
 
@@ -182,20 +186,28 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             //1
             AllText.Text = allpm;
+
             //2  
             IDText.Text = oFinder.FixID(allpm);
+
             //3
             PmText.Text = oFinder.PM(allpm);
+
             //4
             ColorID.Text = oFinder.FColorstart(allpm);
+
             //5
             PmColor.Text = oFinder.FColorEnd(allpm);
+
             //6
             oFinder.EditID(allpm);
+
             //7
             oFinder.Editpm(allpm);
+
             //8
             oFinder.PmRemoveTag(PmText);
+
             //9
             richTextBox2.Text = oFinder.Finish(ListBoxKhatKhatShode, PmText);
 
@@ -203,34 +215,12 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         public void Converttostrinbuilder(ListBox _listboxRTFShode, RichTextBox rich1, RichTextBox rich2)
         {
             StringBuilder s = new StringBuilder();
-            s.AppendLine(rich1.SelectedRtf = _listboxRTFShode.SelectedItem.ToString()
-              + Environment.NewLine);
+
+            s.AppendLine(rich1.SelectedRtf = _listboxRTFShode.SelectedItem.ToString() + Environment.NewLine);
+
             rich2.Rtf = s.ToString();
         }
 
-        private void SearchPanelShow()
-        {
-            //گرفتن ارتفا پانل نمایش سرچ
-            int _Height = groupBox3.Height;
-            //گرفتن عرض پانل نمایش سرچ
-            int _Width = groupBox3.Width;
-
-            if (ShowSearchBox)
-            {
-                ShowSearchBox = false;
-
-                TSMI_HideSearchBox.Visible = false;
-
-                TSMI_ShowSearchBox.Visible = true;
-
-                groupBox3.Size = new Size(_Width, 50);
-
-
-            }
-
-            groupBox_search.Visible = ShowSearchBox;
-
-        }
 
 
         #region متدهای منوی ادیت بالا
@@ -288,6 +278,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private void AddToSearch(CustomRichTextBox customRichTextBox1)
         {
             cboSearch.Items.Add(customRichTextBox1.SelectedText);
+
             cboSearch.SelectedItem = customRichTextBox1.SelectedText;
         }
 
@@ -300,14 +291,19 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             if (s)
             {
                 oEmoji = new Emoji(customRichTextBox1);
+
                 oEmoji.CreateEmotions();
+
                 oEmoji.AddEmotions();
+
                 richTextBox4.Text = customRichTextBox1.Rtf;
 
             }
             else
             {
+
                 return;
+
             }
 
         }
@@ -318,8 +314,59 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         public void FontChange()
         {
+
             oEmoji.FontChange(customRichTextBox1);
+
         }
+     
+        /// <summary>
+        /// متد تغییر زبان برنامه
+        /// </summary>
+        /// <param name="c"></param>
+        public void ChangeLang(Form c)
+        {
+            switch (Thread.CurrentThread.CurrentUICulture.IetfLanguageTag)
+            {
+                case "fa-IR":
+
+                    c.Controls.Clear();
+
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
+                    this.InitializeComponent();
+
+                    enToolStripMenuItem.Enabled = false;
+
+                    frToolStripMenuItem.Enabled = true;
+
+                    this.Loaderstartwindows();
+
+                    break;
+
+                case "en-US":
+
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("fa-IR");
+
+                    this.Controls.Clear();
+
+                    this.InitializeComponent();
+
+                    this.frToolStripMenuItem.Enabled = false;
+
+                    this.enToolStripMenuItem.Enabled = true;
+
+                    this.Loaderstartwindows();
+
+
+                    break;
+
+                default:
+                    break;
+
+            }
+
+        }
+
 
 
         #endregion
@@ -344,15 +391,17 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             try
             {
                 ConfigForShowPm_in_richtextbox(ListBoxKhatKhatShode, ListBoxRTFshode, RT_Aval);
+
                 customRichTextBox1.Text.Remove(0, 1);
+
                 toolStripProgressBar1.Visible = Enabled;
+
                 toolStripProgressBar1.Size = new Size(this.Width / 3, 12);
 
             }
             catch (Exception) { }
 
         }
-        public List<string> ArchivePaths = new List<string>();
 
 
         public void ListboxtoList()
@@ -436,40 +485,54 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private void UndoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             _Undo(customRichTextBox1);
+
         }
 
         private void RedoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             _Redo(customRichTextBox1);
+
         }
 
         private void CutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             _Cut(customRichTextBox1);
+
         }
 
         private void CopyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             _Copy(customRichTextBox1);
+
         }
 
         private void PasteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             _Paste(customRichTextBox1);
+
         }
 
         private void SelectAllToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             _SelectAll(customRichTextBox1);
+
         }
 
         private void ClearToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             _Clear(customRichTextBox1);
+
         }
 
         private void AddToSearchToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             AddToSearch(customRichTextBox1);
         }
 
@@ -478,7 +541,9 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         #region View
         private void SearchBoxShowToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SearchPanelShow();
+            SearchBoxHidSHow();
+
+            //  SearchPanelShow();
             //  searchBoxHideToolStripMenuItem.Visible = false;
         }
         private void ShowEmojiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -493,12 +558,14 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private void SettingsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FRM_Settings f = new FRM_Settings();
+
             f.Show();
         }
 
         private void FindPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FRM_ZamtalkPasswordFinder f = new FRM_ZamtalkPasswordFinder();
+
             f.Show();
 
         }
@@ -507,6 +574,31 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             FontChange();
         }
+
+        #region تغییر زبان
+
+
+        /// <summary>
+        /// تبدیل زبانه برنامه به انگلیسی
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLang(this);
+        }
+
+        /// <summary>
+        /// تبدیل زبانه برنامه به فارسی
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLang(this);
+        }
+
+        #endregion
 
         #endregion
 
@@ -535,7 +627,9 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             }
             if (!cboSearch.Items.Contains(cboSearch.Text))
             {
+
                 this.cboSearch.Items.Add(this.cboSearch.Text);
+
             }
 
 
@@ -546,9 +640,12 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             using (ColorDialog colorDialog = new ColorDialog())
             {
                 colorDialog.Color = this.panelColor.BackColor;
+
                 if (colorDialog.ShowDialog() == DialogResult.OK)
                 {
+
                     this.panelColor.BackColor = colorDialog.Color;
+
                 }
             }
         }
@@ -556,7 +653,9 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             if (e.KeyChar == (char)13)
             {
+
                 btnSearchAndHighlight.PerformClick();
+
             }
         }
         private void CboSearch_TextChanged(object sender, EventArgs e)
@@ -564,10 +663,14 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             // Disable the SearchAndHightlight button
             if (cboSearch.Text.Length == 0)
             {
+
                 this.btnSearchAndHighlight.Enabled = false;
+
             }
+
             else
             {
+
                 // Enable the SearchAndHightlight button
                 this.btnSearchAndHighlight.Enabled = true;
             }
@@ -582,6 +685,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             richTextBox4.Text = customRichTextBox1.Rtf;
 
             ShowEmojiScript(ShowEmoji);
+
             // Fixer("^   ([\\]])", "A", customRichTextBox1.Rtf);
 
 
@@ -589,6 +693,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private string Fixer(string Pattern, string Replacement, string Input)
         {
             RegexOptions options = RegexOptions.IgnoreCase;
+
             Regex regex = new Regex(Pattern, options, TimeSpan.FromMilliseconds(1000));
 
             return regex.Replace(Input, Replacement);
@@ -644,7 +749,8 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         }
         private void SearchBoxShowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchPanelShow();
+            SearchBoxHidSHow();
+
         }
         private void ArchiveLoadToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -659,140 +765,106 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         #endregion
 
-        private void EnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChangeLang(this);
-        }
 
-        private void FrToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChangeLang(this);
-        }
-
-        public void ChangeLang(Form c)
-        {
-            switch (Thread.CurrentThread.CurrentUICulture.IetfLanguageTag)
-            {
-                case "fa-IR":
-
-                    c.Controls.Clear();
-
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-                    this.InitializeComponent();
-
-                    enToolStripMenuItem.Enabled = false;
-
-                    frToolStripMenuItem.Enabled = true;
-
-                    this.Loaderstartwindows();
-                    break;
-                case "en-US":
-
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("fa-IR");
-
-                    this.Controls.Clear();
-
-                    this.InitializeComponent();
-
-                    this.frToolStripMenuItem.Enabled = false;
-
-                    this.enToolStripMenuItem.Enabled = true;
-
-                    this.Loaderstartwindows();
-
-                    break;
-                default:
-                    break;
-
-            }
-
-        }
-
-
-        private void SearchBoxHideToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CMS_ShowSearchpanel_Click(object sender, EventArgs e)
         {
             SearchBoxHidSHow();
         }
-        public void TreeviewClearAllItems()
-        {
-            treeView1.Nodes.Clear();
-        }
-        public void SearchBoxHidSHow()
-        {
-            //گرفتن ارتفا پانل نمایش سرچ
 
-            int _Height = groupBox3.Height;
-            //گرفتن عرض پانل نمایش سرچ
-            int _Width = groupBox3.Width;
-
-            if (!ShowSearchBox)
-            {
-                ShowSearchBox = true;
-
-                TSMI_ShowSearchBox.Visible = false;
-                TSMI_HideSearchBox.Visible = true;
-                groupBox3.Size = new Size(_Width, 120);
-            }
-            groupBox_search.Visible = ShowSearchBox;
-
-        }
         private void ViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
+
         private void HideEmojiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ShowEmoji = false;
-            hideEmojiToolStripMenuItem1.Visible = false;
-            showEmojiToolStripMenuItem.Visible = true;
+
+            MenuEdit_hideEmoji.Visible = false;
+
+            MenuEdit_showEmoji.Visible = true;
 
         }
-
 
         private void ShowEmojiToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             ShowEmoji = true;
 
-            showEmojiToolStripMenuItem.Visible = false;
-            hideEmojiToolStripMenuItem1.Visible = true;
+            MenuEdit_showEmoji.Visible = false;
+
+            MenuEdit_hideEmoji.Visible = true;
         }
 
-
-
-        public bool TrueFalse(bool ss)
+        private void SearchBoxHideToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ss)
-            {
-                ShowEmojiScript(ss);
-
-                return ss = false;
-
-            }
-            else if (!ss)
-
-            {
-                ShowEmojiScript(!ss);
-                ss = true;
-                showEmojiToolStripMenuItem.Visible = false;
-                hideEmojiToolStripMenuItem1.Visible = true;
-            }
-            return ss;
+            SearchBoxHidSHow();
         }
+
+        public void TreeviewClearAllItems()
+        {
+            treeView1.Nodes.Clear();
+        }
+
+        public void SearchBoxHidSHow()
+        {
+            //گرفتن ارتفا پانل نمایش سرچ
+            int _Height = groupBox3.Height;
+
+            //گرفتن عرض پانل نمایش سرچ
+            int _Width = groupBox3.Width;
+
+
+            MenuEdite_HideSearchBox.Visible = true;
+
+            MenuEdite_ShowSearchBox.Visible = false;
+
+            CMS_ShowSearchpanel.Visible = false;
+
+            if (!ShowSearchBox)
+            {
+                ShowSearchBox = true;
+
+                searchBoxShow_TSMI.Visible = true;
+
+                MenuEdite_ShowSearchBox.Visible = false;
+
+                MenuEdite_HideSearchBox.Visible = true;
+
+                CMS_ShowSearchpanel.Visible = false;
+
+                groupBox3.Size = new Size(_Width, 120);
+
+            }
+
+            else if (ShowSearchBox)
+            {
+                ShowSearchBox = false;
+
+                searchBoxShow_TSMI.Visible = false;
+
+                MenuEdite_HideSearchBox.Visible = false;
+
+                MenuEdite_ShowSearchBox.Visible = true;
+
+                CMS_ShowSearchpanel.Visible = true;
+
+                groupBox3.Size = new Size(_Width, 0);
+            }
+
+            groupBox_search.Visible = ShowSearchBox;
+
+        }
+
+
 
         public void NodRefesh()
         {
             TreeNode a = treeView1.SelectedNode;
+
             treeView1.SelectedNode = treeView1.SelectedNode.NextNode;
+
             treeView1.SelectedNode = a;
         }
-
-    
-
-
-
-
-
-
 
     }
 

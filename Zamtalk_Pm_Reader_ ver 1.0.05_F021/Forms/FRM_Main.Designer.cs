@@ -36,14 +36,15 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             this.B = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.cMS_TreeView = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.RastClick_treeView = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.archiveLoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchBoxShowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchBoxShow_TSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.CMS_ShowSearchpanel = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.splitContainer_PM_RTF = new System.Windows.Forms.SplitContainer();
             this.customRichTextBox1 = new Zamtalk_Pm_Reader__vr_1._0._0._0.CustomRichTextBox();
-            this.cMS_RichTextBox = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.RastClick_RichTextBox = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -62,7 +63,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.ListBoxRTFshode = new System.Windows.Forms.ListBox();
             this.ListBoxKhatKhatShode = new System.Windows.Forms.ListBox();
-            this.SS1 = new System.Windows.Forms.StatusStrip();
+            this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -77,57 +78,57 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             this.panelColor = new System.Windows.Forms.Panel();
             this.BTN_Reload = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MS1 = new System.Windows.Forms.MenuStrip();
+            this.MenuEdite = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.archiveLoadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_archiveLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.خروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.undoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.redoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Undo = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Redo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.cutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.selectAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Cut = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Copy = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Paste = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_SelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Clear = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.addToSearchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_AddToShearch = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_HideSearchBox = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_ShowSearchBox = new System.Windows.Forms.ToolStripMenuItem();
-            this.showEmojiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hideEmojiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdite_HideSearchBox = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdite_ShowSearchBox = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_showEmoji = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_hideEmoji = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.findPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تغییرفونتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.langToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_settingsDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_findPassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_FontChange = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Language = new System.Windows.Forms.ToolStripMenuItem();
             this.enToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuEdit_Versioninfo = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.B)).BeginInit();
             this.B.Panel1.SuspendLayout();
             this.B.Panel2.SuspendLayout();
             this.B.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.cMS_TreeView.SuspendLayout();
+            this.RastClick_treeView.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_PM_RTF)).BeginInit();
             this.splitContainer_PM_RTF.Panel1.SuspendLayout();
             this.splitContainer_PM_RTF.Panel2.SuspendLayout();
             this.splitContainer_PM_RTF.SuspendLayout();
-            this.cMS_RichTextBox.SuspendLayout();
+            this.RastClick_RichTextBox.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.SS1.SuspendLayout();
+            this.StatusBar.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox_search.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.MS1.SuspendLayout();
+            this.MenuEdite.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,19 +159,20 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             // 
             // treeView1
             // 
-            this.treeView1.ContextMenuStrip = this.cMS_TreeView;
+            this.treeView1.ContextMenuStrip = this.RastClick_treeView;
             resources.ApplyResources(this.treeView1, "treeView1");
             this.treeView1.Name = "treeView1";
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
             // 
-            // cMS_TreeView
+            // RastClick_treeView
             // 
-            this.cMS_TreeView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RastClick_treeView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archiveLoadToolStripMenuItem,
             this.openToolStripMenuItem,
-            this.searchBoxShowToolStripMenuItem});
-            this.cMS_TreeView.Name = "contextMenuStrip2";
-            resources.ApplyResources(this.cMS_TreeView, "cMS_TreeView");
+            this.searchBoxShow_TSMI,
+            this.CMS_ShowSearchpanel});
+            this.RastClick_treeView.Name = "contextMenuStrip2";
+            resources.ApplyResources(this.RastClick_treeView, "RastClick_treeView");
             // 
             // archiveLoadToolStripMenuItem
             // 
@@ -184,11 +186,17 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
-            // searchBoxShowToolStripMenuItem
+            // searchBoxShow_TSMI
             // 
-            this.searchBoxShowToolStripMenuItem.Name = "searchBoxShowToolStripMenuItem";
-            resources.ApplyResources(this.searchBoxShowToolStripMenuItem, "searchBoxShowToolStripMenuItem");
-            this.searchBoxShowToolStripMenuItem.Click += new System.EventHandler(this.SearchBoxShowToolStripMenuItem_Click);
+            this.searchBoxShow_TSMI.Name = "searchBoxShow_TSMI";
+            resources.ApplyResources(this.searchBoxShow_TSMI, "searchBoxShow_TSMI");
+            this.searchBoxShow_TSMI.Click += new System.EventHandler(this.SearchBoxShowToolStripMenuItem_Click);
+            // 
+            // CMS_ShowSearchpanel
+            // 
+            this.CMS_ShowSearchpanel.Name = "CMS_ShowSearchpanel";
+            resources.ApplyResources(this.CMS_ShowSearchpanel, "CMS_ShowSearchpanel");
+            this.CMS_ShowSearchpanel.Click += new System.EventHandler(this.CMS_ShowSearchpanel_Click);
             // 
             // groupBox2
             // 
@@ -220,15 +228,15 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             // customRichTextBox1
             // 
             this.customRichTextBox1.AutoWordSelection = true;
-            this.customRichTextBox1.ContextMenuStrip = this.cMS_RichTextBox;
+            this.customRichTextBox1.ContextMenuStrip = this.RastClick_RichTextBox;
             resources.ApplyResources(this.customRichTextBox1, "customRichTextBox1");
             this.customRichTextBox1.EnableAutoDragDrop = true;
             this.customRichTextBox1.Name = "customRichTextBox1";
             this.customRichTextBox1.TextChanged += new System.EventHandler(this.CustomRichTextBox1_TextChanged);
             // 
-            // cMS_RichTextBox
+            // RastClick_RichTextBox
             // 
-            this.cMS_RichTextBox.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RastClick_RichTextBox.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.undoToolStripMenuItem,
             this.redoToolStripMenuItem,
             this.toolStripSeparator1,
@@ -239,8 +247,8 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             this.selectAllToolStripMenuItem,
             this.clearToolStripMenuItem,
             this.addToSearchToolStripMenuItem});
-            this.cMS_RichTextBox.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.cMS_RichTextBox, "cMS_RichTextBox");
+            this.RastClick_RichTextBox.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.RastClick_RichTextBox, "RastClick_RichTextBox");
             // 
             // undoToolStripMenuItem
             // 
@@ -354,14 +362,14 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             this.ListBoxKhatKhatShode.Name = "ListBoxKhatKhatShode";
             this.ListBoxKhatKhatShode.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
-            // SS1
+            // StatusBar
             // 
-            this.SS1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
             this.toolStripStatusLabel1});
-            resources.ApplyResources(this.SS1, "SS1");
-            this.SS1.Name = "SS1";
-            this.SS1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            resources.ApplyResources(this.StatusBar, "StatusBar");
+            this.StatusBar.Name = "StatusBar";
+            this.StatusBar.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             // 
             // toolStripProgressBar1
             // 
@@ -463,198 +471,198 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             // 
             this.panel1.Controls.Add(this.B);
             this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.SS1);
+            this.panel1.Controls.Add(this.StatusBar);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // MS1
+            // MenuEdite
             // 
-            this.MS1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuEdite.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.viewToolStripMenuItem,
             this.toolsToolStripMenuItem,
             this.aboutToolStripMenuItem});
-            resources.ApplyResources(this.MS1, "MS1");
-            this.MS1.Name = "MS1";
+            resources.ApplyResources(this.MenuEdite, "MenuEdite");
+            this.MenuEdite.Name = "MenuEdite";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archiveLoadToolStripMenuItem1,
-            this.openToolStripMenuItem1,
+            this.MenuEdit_archiveLoad,
+            this.MenuEdit_open,
             this.toolStripSeparator4,
-            this.خروجToolStripMenuItem});
+            this.MenuEdit_Exit});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
-            // archiveLoadToolStripMenuItem1
+            // MenuEdit_archiveLoad
             // 
-            this.archiveLoadToolStripMenuItem1.Name = "archiveLoadToolStripMenuItem1";
-            resources.ApplyResources(this.archiveLoadToolStripMenuItem1, "archiveLoadToolStripMenuItem1");
-            this.archiveLoadToolStripMenuItem1.Click += new System.EventHandler(this.ArchiveLoadToolStripMenuItem1_Click);
+            this.MenuEdit_archiveLoad.Name = "MenuEdit_archiveLoad";
+            resources.ApplyResources(this.MenuEdit_archiveLoad, "MenuEdit_archiveLoad");
+            this.MenuEdit_archiveLoad.Click += new System.EventHandler(this.ArchiveLoadToolStripMenuItem1_Click);
             // 
-            // openToolStripMenuItem1
+            // MenuEdit_open
             // 
-            this.openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            resources.ApplyResources(this.openToolStripMenuItem1, "openToolStripMenuItem1");
-            this.openToolStripMenuItem1.Click += new System.EventHandler(this.OpenToolStripMenuItem1_Click);
+            this.MenuEdit_open.Name = "MenuEdit_open";
+            resources.ApplyResources(this.MenuEdit_open, "MenuEdit_open");
+            this.MenuEdit_open.Click += new System.EventHandler(this.OpenToolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             // 
-            // خروجToolStripMenuItem
+            // MenuEdit_Exit
             // 
-            this.خروجToolStripMenuItem.Name = "خروجToolStripMenuItem";
-            resources.ApplyResources(this.خروجToolStripMenuItem, "خروجToolStripMenuItem");
-            this.خروجToolStripMenuItem.Click += new System.EventHandler(this.خروجToolStripMenuItem_Click);
+            this.MenuEdit_Exit.Name = "MenuEdit_Exit";
+            resources.ApplyResources(this.MenuEdit_Exit, "MenuEdit_Exit");
+            this.MenuEdit_Exit.Click += new System.EventHandler(this.خروجToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.undoToolStripMenuItem1,
-            this.redoToolStripMenuItem1,
+            this.MenuEdit_Undo,
+            this.MenuEdit_Redo,
             this.toolStripSeparator3,
-            this.cutToolStripMenuItem1,
-            this.copyToolStripMenuItem1,
-            this.pasteToolStripMenuItem1,
-            this.selectAllToolStripMenuItem1,
-            this.clearToolStripMenuItem1,
+            this.MenuEdit_Cut,
+            this.MenuEdit_Copy,
+            this.MenuEdit_Paste,
+            this.MenuEdit_SelectAll,
+            this.MenuEdit_Clear,
             this.toolStripSeparator7,
-            this.addToSearchToolStripMenuItem1});
+            this.MenuEdit_AddToShearch});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             // 
-            // undoToolStripMenuItem1
+            // MenuEdit_Undo
             // 
-            this.undoToolStripMenuItem1.Name = "undoToolStripMenuItem1";
-            resources.ApplyResources(this.undoToolStripMenuItem1, "undoToolStripMenuItem1");
-            this.undoToolStripMenuItem1.Click += new System.EventHandler(this.UndoToolStripMenuItem1_Click);
+            this.MenuEdit_Undo.Name = "MenuEdit_Undo";
+            resources.ApplyResources(this.MenuEdit_Undo, "MenuEdit_Undo");
+            this.MenuEdit_Undo.Click += new System.EventHandler(this.UndoToolStripMenuItem1_Click);
             // 
-            // redoToolStripMenuItem1
+            // MenuEdit_Redo
             // 
-            this.redoToolStripMenuItem1.Name = "redoToolStripMenuItem1";
-            resources.ApplyResources(this.redoToolStripMenuItem1, "redoToolStripMenuItem1");
-            this.redoToolStripMenuItem1.Click += new System.EventHandler(this.RedoToolStripMenuItem1_Click);
+            this.MenuEdit_Redo.Name = "MenuEdit_Redo";
+            resources.ApplyResources(this.MenuEdit_Redo, "MenuEdit_Redo");
+            this.MenuEdit_Redo.Click += new System.EventHandler(this.RedoToolStripMenuItem1_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
-            // cutToolStripMenuItem1
+            // MenuEdit_Cut
             // 
-            this.cutToolStripMenuItem1.Name = "cutToolStripMenuItem1";
-            resources.ApplyResources(this.cutToolStripMenuItem1, "cutToolStripMenuItem1");
-            this.cutToolStripMenuItem1.Click += new System.EventHandler(this.CutToolStripMenuItem1_Click);
+            this.MenuEdit_Cut.Name = "MenuEdit_Cut";
+            resources.ApplyResources(this.MenuEdit_Cut, "MenuEdit_Cut");
+            this.MenuEdit_Cut.Click += new System.EventHandler(this.CutToolStripMenuItem1_Click);
             // 
-            // copyToolStripMenuItem1
+            // MenuEdit_Copy
             // 
-            this.copyToolStripMenuItem1.Name = "copyToolStripMenuItem1";
-            resources.ApplyResources(this.copyToolStripMenuItem1, "copyToolStripMenuItem1");
-            this.copyToolStripMenuItem1.Click += new System.EventHandler(this.CopyToolStripMenuItem1_Click);
+            this.MenuEdit_Copy.Name = "MenuEdit_Copy";
+            resources.ApplyResources(this.MenuEdit_Copy, "MenuEdit_Copy");
+            this.MenuEdit_Copy.Click += new System.EventHandler(this.CopyToolStripMenuItem1_Click);
             // 
-            // pasteToolStripMenuItem1
+            // MenuEdit_Paste
             // 
-            this.pasteToolStripMenuItem1.Name = "pasteToolStripMenuItem1";
-            resources.ApplyResources(this.pasteToolStripMenuItem1, "pasteToolStripMenuItem1");
-            this.pasteToolStripMenuItem1.Click += new System.EventHandler(this.PasteToolStripMenuItem1_Click);
+            this.MenuEdit_Paste.Name = "MenuEdit_Paste";
+            resources.ApplyResources(this.MenuEdit_Paste, "MenuEdit_Paste");
+            this.MenuEdit_Paste.Click += new System.EventHandler(this.PasteToolStripMenuItem1_Click);
             // 
-            // selectAllToolStripMenuItem1
+            // MenuEdit_SelectAll
             // 
-            this.selectAllToolStripMenuItem1.Name = "selectAllToolStripMenuItem1";
-            resources.ApplyResources(this.selectAllToolStripMenuItem1, "selectAllToolStripMenuItem1");
-            this.selectAllToolStripMenuItem1.Click += new System.EventHandler(this.SelectAllToolStripMenuItem1_Click);
+            this.MenuEdit_SelectAll.Name = "MenuEdit_SelectAll";
+            resources.ApplyResources(this.MenuEdit_SelectAll, "MenuEdit_SelectAll");
+            this.MenuEdit_SelectAll.Click += new System.EventHandler(this.SelectAllToolStripMenuItem1_Click);
             // 
-            // clearToolStripMenuItem1
+            // MenuEdit_Clear
             // 
-            this.clearToolStripMenuItem1.Name = "clearToolStripMenuItem1";
-            resources.ApplyResources(this.clearToolStripMenuItem1, "clearToolStripMenuItem1");
-            this.clearToolStripMenuItem1.Click += new System.EventHandler(this.ClearToolStripMenuItem1_Click);
+            this.MenuEdit_Clear.Name = "MenuEdit_Clear";
+            resources.ApplyResources(this.MenuEdit_Clear, "MenuEdit_Clear");
+            this.MenuEdit_Clear.Click += new System.EventHandler(this.ClearToolStripMenuItem1_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
             // 
-            // addToSearchToolStripMenuItem1
+            // MenuEdit_AddToShearch
             // 
-            this.addToSearchToolStripMenuItem1.Name = "addToSearchToolStripMenuItem1";
-            resources.ApplyResources(this.addToSearchToolStripMenuItem1, "addToSearchToolStripMenuItem1");
-            this.addToSearchToolStripMenuItem1.Click += new System.EventHandler(this.AddToSearchToolStripMenuItem1_Click);
+            this.MenuEdit_AddToShearch.Name = "MenuEdit_AddToShearch";
+            resources.ApplyResources(this.MenuEdit_AddToShearch, "MenuEdit_AddToShearch");
+            this.MenuEdit_AddToShearch.Click += new System.EventHandler(this.AddToSearchToolStripMenuItem1_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMI_HideSearchBox,
-            this.TSMI_ShowSearchBox,
-            this.showEmojiToolStripMenuItem,
-            this.hideEmojiToolStripMenuItem1});
+            this.MenuEdite_HideSearchBox,
+            this.MenuEdite_ShowSearchBox,
+            this.MenuEdit_showEmoji,
+            this.MenuEdit_hideEmoji});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.ViewToolStripMenuItem_Click);
             // 
-            // TSMI_HideSearchBox
+            // MenuEdite_HideSearchBox
             // 
-            this.TSMI_HideSearchBox.Name = "TSMI_HideSearchBox";
-            resources.ApplyResources(this.TSMI_HideSearchBox, "TSMI_HideSearchBox");
-            this.TSMI_HideSearchBox.Click += new System.EventHandler(this.SearchBoxShowToolStripMenuItem1_Click);
+            this.MenuEdite_HideSearchBox.Name = "MenuEdite_HideSearchBox";
+            resources.ApplyResources(this.MenuEdite_HideSearchBox, "MenuEdite_HideSearchBox");
+            this.MenuEdite_HideSearchBox.Click += new System.EventHandler(this.SearchBoxShowToolStripMenuItem1_Click);
             // 
-            // TSMI_ShowSearchBox
+            // MenuEdite_ShowSearchBox
             // 
-            this.TSMI_ShowSearchBox.Name = "TSMI_ShowSearchBox";
-            resources.ApplyResources(this.TSMI_ShowSearchBox, "TSMI_ShowSearchBox");
-            this.TSMI_ShowSearchBox.Click += new System.EventHandler(this.SearchBoxHideToolStripMenuItem_Click);
+            this.MenuEdite_ShowSearchBox.Name = "MenuEdite_ShowSearchBox";
+            resources.ApplyResources(this.MenuEdite_ShowSearchBox, "MenuEdite_ShowSearchBox");
+            this.MenuEdite_ShowSearchBox.Click += new System.EventHandler(this.SearchBoxHideToolStripMenuItem_Click);
             // 
-            // showEmojiToolStripMenuItem
+            // MenuEdit_showEmoji
             // 
-            this.showEmojiToolStripMenuItem.Name = "showEmojiToolStripMenuItem";
-            resources.ApplyResources(this.showEmojiToolStripMenuItem, "showEmojiToolStripMenuItem");
-            this.showEmojiToolStripMenuItem.Click += new System.EventHandler(this.ShowEmojiToolStripMenuItem_Click_1);
+            this.MenuEdit_showEmoji.Name = "MenuEdit_showEmoji";
+            resources.ApplyResources(this.MenuEdit_showEmoji, "MenuEdit_showEmoji");
+            this.MenuEdit_showEmoji.Click += new System.EventHandler(this.ShowEmojiToolStripMenuItem_Click_1);
             // 
-            // hideEmojiToolStripMenuItem1
+            // MenuEdit_hideEmoji
             // 
-            this.hideEmojiToolStripMenuItem1.Name = "hideEmojiToolStripMenuItem1";
-            resources.ApplyResources(this.hideEmojiToolStripMenuItem1, "hideEmojiToolStripMenuItem1");
-            this.hideEmojiToolStripMenuItem1.Click += new System.EventHandler(this.HideEmojiToolStripMenuItem1_Click);
+            this.MenuEdit_hideEmoji.Name = "MenuEdit_hideEmoji";
+            resources.ApplyResources(this.MenuEdit_hideEmoji, "MenuEdit_hideEmoji");
+            this.MenuEdit_hideEmoji.Click += new System.EventHandler(this.HideEmojiToolStripMenuItem1_Click);
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem1,
-            this.findPasswordToolStripMenuItem,
-            this.تغییرفونتToolStripMenuItem,
-            this.langToolStripMenuItem});
+            this.MenuEdit_settingsDir,
+            this.MenuEdit_findPassword,
+            this.MenuEdit_FontChange,
+            this.MenuEdit_Language});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
             // 
-            // settingsToolStripMenuItem1
+            // MenuEdit_settingsDir
             // 
-            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            resources.ApplyResources(this.settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
-            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.SettingsToolStripMenuItem1_Click);
+            this.MenuEdit_settingsDir.Name = "MenuEdit_settingsDir";
+            resources.ApplyResources(this.MenuEdit_settingsDir, "MenuEdit_settingsDir");
+            this.MenuEdit_settingsDir.Click += new System.EventHandler(this.SettingsToolStripMenuItem1_Click);
             // 
-            // findPasswordToolStripMenuItem
+            // MenuEdit_findPassword
             // 
-            this.findPasswordToolStripMenuItem.Name = "findPasswordToolStripMenuItem";
-            resources.ApplyResources(this.findPasswordToolStripMenuItem, "findPasswordToolStripMenuItem");
-            this.findPasswordToolStripMenuItem.Click += new System.EventHandler(this.FindPasswordToolStripMenuItem_Click);
+            this.MenuEdit_findPassword.Name = "MenuEdit_findPassword";
+            resources.ApplyResources(this.MenuEdit_findPassword, "MenuEdit_findPassword");
+            this.MenuEdit_findPassword.Click += new System.EventHandler(this.FindPasswordToolStripMenuItem_Click);
             // 
-            // تغییرفونتToolStripMenuItem
+            // MenuEdit_FontChange
             // 
-            this.تغییرفونتToolStripMenuItem.Name = "تغییرفونتToolStripMenuItem";
-            resources.ApplyResources(this.تغییرفونتToolStripMenuItem, "تغییرفونتToolStripMenuItem");
-            this.تغییرفونتToolStripMenuItem.Click += new System.EventHandler(this.تغییرفونتToolStripMenuItem_Click_1);
+            this.MenuEdit_FontChange.Name = "MenuEdit_FontChange";
+            resources.ApplyResources(this.MenuEdit_FontChange, "MenuEdit_FontChange");
+            this.MenuEdit_FontChange.Click += new System.EventHandler(this.تغییرفونتToolStripMenuItem_Click_1);
             // 
-            // langToolStripMenuItem
+            // MenuEdit_Language
             // 
-            this.langToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuEdit_Language.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.enToolStripMenuItem,
             this.frToolStripMenuItem});
-            this.langToolStripMenuItem.Name = "langToolStripMenuItem";
-            resources.ApplyResources(this.langToolStripMenuItem, "langToolStripMenuItem");
+            this.MenuEdit_Language.Name = "MenuEdit_Language";
+            resources.ApplyResources(this.MenuEdit_Language, "MenuEdit_Language");
             // 
             // enToolStripMenuItem
             // 
@@ -671,19 +679,19 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infoToolStripMenuItem});
+            this.MenuEdit_Versioninfo});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             // 
-            // infoToolStripMenuItem
+            // MenuEdit_Versioninfo
             // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            resources.ApplyResources(this.infoToolStripMenuItem, "infoToolStripMenuItem");
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
+            this.MenuEdit_Versioninfo.Name = "MenuEdit_Versioninfo";
+            resources.ApplyResources(this.MenuEdit_Versioninfo, "MenuEdit_Versioninfo");
+            this.MenuEdit_Versioninfo.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.MS1);
+            this.panel3.Controls.Add(this.MenuEdite);
             this.panel3.Controls.Add(this.panel2);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
@@ -704,17 +712,17 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             ((System.ComponentModel.ISupportInitialize)(this.B)).EndInit();
             this.B.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.cMS_TreeView.ResumeLayout(false);
+            this.RastClick_treeView.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.splitContainer_PM_RTF.Panel1.ResumeLayout(false);
             this.splitContainer_PM_RTF.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_PM_RTF)).EndInit();
             this.splitContainer_PM_RTF.ResumeLayout(false);
-            this.cMS_RichTextBox.ResumeLayout(false);
+            this.RastClick_RichTextBox.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.SS1.ResumeLayout(false);
-            this.SS1.PerformLayout();
+            this.StatusBar.ResumeLayout(false);
+            this.StatusBar.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox_search.ResumeLayout(false);
             this.groupBox_search.PerformLayout();
@@ -722,8 +730,8 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
             this.groupBox5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.MS1.ResumeLayout(false);
-            this.MS1.PerformLayout();
+            this.MenuEdite.ResumeLayout(false);
+            this.MenuEdite.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -732,16 +740,16 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
         #endregion
         private System.Windows.Forms.SplitContainer B;
-        private System.Windows.Forms.StatusStrip SS1;
+        private System.Windows.Forms.StatusStrip StatusBar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button BTN_Reload;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip MS1;
+        private System.Windows.Forms.MenuStrip MenuEdite;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem خروجToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip cMS_RichTextBox;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Exit;
+        private System.Windows.Forms.ContextMenuStrip RastClick_RichTextBox;
         private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
@@ -749,7 +757,7 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip cMS_TreeView;
+        private System.Windows.Forms.ContextMenuStrip RastClick_treeView;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -775,38 +783,39 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ToolStripMenuItem addToSearchToolStripMenuItem;
         public Zamtalk_Pm_Reader__vr_1._0._0._0.CustomRichTextBox customRichTextBox1;
-        private System.Windows.Forms.ToolStripMenuItem searchBoxShowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchBoxShow_TSMI;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Undo;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Redo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Cut;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Copy;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Paste;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_SelectAll;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Clear;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripMenuItem addToSearchToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem TSMI_HideSearchBox;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem findPasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تغییرفونتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_AddToShearch;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdite_HideSearchBox;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_settingsDir;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_findPassword;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Versioninfo;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_FontChange;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_open;
         private System.Windows.Forms.ToolStripMenuItem archiveLoadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem archiveLoadToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_archiveLoad;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem langToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_Language;
         private System.Windows.Forms.ToolStripMenuItem enToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem frToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TSMI_ShowSearchBox;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdite_ShowSearchBox;
         private System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.ToolStripMenuItem showEmojiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hideEmojiToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_showEmoji;
+        private System.Windows.Forms.ToolStripMenuItem MenuEdit_hideEmoji;
+        private System.Windows.Forms.ToolStripMenuItem CMS_ShowSearchpanel;
     }
 }
 
