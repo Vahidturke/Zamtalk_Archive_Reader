@@ -14,9 +14,10 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          Application.Run(new FRM_Main());
-          //Application.Run(new Form1());
-        
+            //Application.Run(new FRM_Main());
+            //Application.Run(new Form1());
+            Application.Run(new Form2());
+
         }
     }
 }

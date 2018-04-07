@@ -870,44 +870,44 @@ namespace Zamtalk_Pm_Reader__vr_1._0._0._0
 
 }
 
-class MyClass
-{
+//class MyClass
+//{
 
-    ListBox ls = new ListBox();
-    private TreeView treeView1;
+//    ListBox ls = new ListBox();
+//    private TreeView treeView1;
 
-    public void AddNodeAndChildNodesToList(TreeNode node)
-    {
+//    public void AddNodeAndChildNodesToList(TreeNode node)
+//    {
 
-        ls.Items.Add(node.Text);    // Adding current nodename to ListBox     
+//        ls.Items.Add(node.Text);    // Adding current nodename to ListBox     
 
-        foreach (TreeNode actualNode in node.Nodes)
-        {
-            AddNodeAndChildNodesToList(actualNode); // recursive call
-        }
-    }
-    private void EnumerateAllNodes()
-    {
-        TreeView myTree = treeView1;
+//        foreach (TreeNode actualNode in node.Nodes)
+//        {
+//            AddNodeAndChildNodesToList(actualNode); // recursive call
+//        }
+//    }
+//    private void EnumerateAllNodes()
+//    {
+//        TreeView myTree = treeView1;
 
-        var allNodes = myTree.Nodes
-            .Cast<TreeNode>()
-            .SelectMany(GetNodeBranch);
+//        var allNodes = myTree.Nodes
+//            .Cast<TreeNode>()
+//            .SelectMany(GetNodeBranch);
 
-        foreach (var treeNode in allNodes)
-        {
-            treeView1.SelectedNode = treeNode;
-            Thread.Sleep(3000);
-        }
-    }
+//        foreach (var treeNode in allNodes)
+//        {
+//            treeView1.SelectedNode = treeNode;
+//            Thread.Sleep(3000);
+//        }
+//    }
 
-    private IEnumerable<TreeNode> GetNodeBranch(TreeNode node)
-    {
-        yield return node;
+//    private IEnumerable<TreeNode> GetNodeBranch(TreeNode node)
+//    {
+//        yield return node;
 
-        foreach (TreeNode child in node.Nodes)
-            foreach (var childChild in GetNodeBranch(child))
-                yield return childChild;
-    }
+//        foreach (TreeNode child in node.Nodes)
+//            foreach (var childChild in GetNodeBranch(child))
+//                yield return childChild;
+//    }
 
-}
+//}
